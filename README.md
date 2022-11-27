@@ -33,6 +33,7 @@ Otra opción sería sumar un dark theme.
 
 Una posible mejora podría ser también cambiar los service por un Hook que haga las peticiones a la API, pero me pareció fácil de entender al diferenciarlos en los service.
 
-con respecto al addToCart, pude hacer que se añada un producto. Al probarlo con postman la api me retornaba la acumulación de los productos en el cart, pero por estar la api en un dominio diferente al front de mi local, no funciona la cookie de sesion en el navegador y no se incrementa el valor del carrito, mas allá de uno.
+con respecto al addToCart, pude hacer que se añada un producto. Al probarlo con postman la api me retornaba la acumulación de los productos en el cart, y probe con fetch nativo y axios pero por estar la api en un dominio diferente al front de mi local, no funciona la cookie de sesion en el navegador y no se incrementa el valor del carrito, mas allá de uno. Se que no era la solución pero al menos quise intentarlo
 
 Quizás una solución podría ser la instalación de un proxy.
+
