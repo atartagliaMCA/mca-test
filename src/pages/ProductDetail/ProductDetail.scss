@@ -1,0 +1,122 @@
+.detail__container{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width:900px;
+  padding: 0 2em 2em;
+  width:100%;
+
+  
+  h3 {
+    width:100%;
+    letter-spacing: 1px;
+    margin: 15px 0 10px;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+  }
+
+  .detail__sections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .detail__left {
+      margin: 15px auto;
+
+    @media (min-width: 768px) {
+      margin: 15px 10px;
+    }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+
+        @media (min-width: 768px) {
+          height: 350px;
+        }
+      }
+    }
+  
+    .detail__right {
+    
+      .detail__desc{
+        background-color: var(--light);
+        border-radius: 7px;
+        border: 1px solid #ccc;
+        box-shadow: 3px 0px 19px 2px rgba(0,0,0,0.13);
+        margin-bottom: 25px;
+        padding: 5px;
+        
+        p {
+          background-color: var(--light);
+          font-size: 12px;
+          padding: 3px;
+        }
+        .detail__price {
+          font-size:20px;
+          font-style: italic;
+          font-weight: 700;
+          
+        }
+      }
+  
+      .detail__actions {
+        background-color: var(--light);
+        border-radius: 7px;
+        border: 1px solid #ccc;
+        box-shadow: 3px 0px 19px 2px rgba(0,0,0,0.13);
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+  
+        p {
+          background-color: var(--light);
+          display: flex;
+          justify-content: space-between;
+        }
+  
+        select {
+          border-radius: 4px;
+          cursor:pointer;
+          margin:2px;
+          max-width: 140px;
+          width: 100%;
+        }
+  
+        button {
+          align-self: center;
+          border-radius: 25px;
+          border: 2px solid var(--lightBlue);
+          cursor:pointer;
+          height: 30px;
+          margin: 20px auto 5px ;
+          max-width: 200px;
+          overflow: hidden;
+          padding: 2px;
+          transition: all 300ms ease;
+          width:100%;
+          
+          &:hover {
+            border: 2px solid var(--redColor);
+            background-color: var(--redColor);
+            color:white;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  
+}
