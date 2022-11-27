@@ -1,6 +1,12 @@
 ## Scripts disponibles
 
-En el directorio del proyecto, podemos correr:
+
+En el directorio del proyecto, debemos realizar un :
+
+### `npm install`
+para instalar las dependencias del proyecto.
+
+##luego desde el directorio del proyecto podemos utilizar los siguientes comandos:
 
 ### `npm start`
 
