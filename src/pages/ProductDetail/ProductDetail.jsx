@@ -1,12 +1,13 @@
 import { Box, CircularProgress } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Item } from "../../components/Item";
 import "./ProductDetail.scss";
 import { getProductDetail } from "../../services/product";
-export const ProductDetail = () => {
+
+export function ProductDetail() {
   const [productDetail, setProductDetail] = useState([]);
-  let { id } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     getProductDetail(id)
@@ -27,4 +28,4 @@ export const ProductDetail = () => {
       )}
     </div>
   );
-};
+}

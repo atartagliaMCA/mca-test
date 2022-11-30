@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context";
 import { useCurrency } from "../../hooks/useCurrency";
 import { addToCart } from "../../services/cart";
 import { setStorageValue } from "../../services/storage";
 
-export const Item = ({ productDetail }) => {
+export function Item({ productDetail }) {
   const {
     battery,
     brand,
@@ -68,7 +68,7 @@ export const Item = ({ productDetail }) => {
             <p>Bateria: {battery}</p>
             <p>Cámara: {primaryCamera}</p>
             <p>Dimensiones: {dimentions}</p>
-            <p>Peso: {`${weight ? weight : "N/A"}`}</p>
+            <p>Peso: {`${weight || "N/A"}`}</p>
           </div>
 
           <div className="detail__actions">
@@ -102,4 +102,4 @@ export const Item = ({ productDetail }) => {
       </div>
     </>
   );
-};
+}

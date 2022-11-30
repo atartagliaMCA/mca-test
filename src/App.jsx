@@ -4,14 +4,14 @@ import { CartContextProvider } from "./context";
 import { ErrorPage, ProductDetail, ProductList } from "./pages";
 import { getProductDetail } from "./services/product";
 
-const Layout = () => {
+function Layout() {
   return (
     <div className="app">
       <Navbar />
       <Outlet />
     </div>
   );
-};
+}
 
 const router = createBrowserRouter([
   {

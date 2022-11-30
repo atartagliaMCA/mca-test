@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@mui/material";
 import { useMatches, useNavigate } from "react-router-dom";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 
-export const Breadcrumb = () => {
+export function Breadcrumb() {
   const [crumbs, setCrumbs] = useState([]);
   const navigate = useNavigate();
   let matches = useMatches();
@@ -15,7 +15,7 @@ export const Breadcrumb = () => {
     Promise.all(
       matches
         .filter((match) => Boolean(match.handle?.crumb))
-        .map((match) => match.handle.crumb(match))
+        .map((match) => match.handle.crumb(match)),
     ).then(setCrumbs);
   }, [matches]);
 
@@ -37,4 +37,4 @@ export const Breadcrumb = () => {
       )}
     </Breadcrumbs>
   );
-};
+}

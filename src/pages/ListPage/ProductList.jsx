@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { ListItem, Search } from "../../components";
-import CircularProgress from "@mui/material/CircularProgress";
+import { useState, useEffect } from "react";
+import "./ProductList.scss";
 import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
 import Box from "@mui/material/Box";
-import "./ProductList.scss";
+import CircularProgress from "@mui/material/CircularProgress";
 import { getProducts } from "../../services/product/product.service";
 import { getStorageValue, setStorageValue } from "../../services/storage";
+import { ListItem, Search } from "../../components";
 
 const defaultProducts = getStorageValue("productList");
-export const ProductList = () => {
+export function ProductList() {
   const [products, setProducts] = useState(defaultProducts || []);
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(!defaultProducts);
@@ -46,12 +46,13 @@ export const ProductList = () => {
         <p>No se encontraron resultados para la búsqueda</p>
       ) : (
         <ul>
-          {filterProducts.map((product) => {
-            return <ListItem product={product} key={product.id} />;
-          })}
+          {filterProducts.map((product) => (
+            <ListItem product={product} key={product.id} />
+          ))}
         </ul>
       )}
       <button
+        type="button"
         className="list__up"
         onClick={() => {
           window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -61,4 +62,4 @@ export const ProductList = () => {
       </button>
     </div>
   );
-};
+}
