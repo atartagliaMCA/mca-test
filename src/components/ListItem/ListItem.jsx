@@ -1,9 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { useCurrency } from "../../hooks/useCurrency";
 import "./ListItem.scss";
 
-export const ListItem = ({ product }) => {
+export function ListItem({ product }) {
   const precio = useCurrency(product.price);
   return (
     <li className="list__item">
@@ -27,4 +26,4 @@ export const ListItem = ({ product }) => {
       </NavLink>
     </li>
   );
-};
+}

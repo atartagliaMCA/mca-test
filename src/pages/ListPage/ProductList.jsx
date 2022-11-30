@@ -17,8 +17,8 @@ export function ProductList() {
 
   const filterProducts = products.filter((item) =>
     filterAtt.some((att) =>
-      item[att].toLowerCase().includes(search.toLowerCase())
-    )
+      item[att].toLowerCase().includes(search.toLowerCase()),
+    ),
   );
 
   useEffect(() => {

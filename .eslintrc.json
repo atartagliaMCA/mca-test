@@ -38,6 +38,7 @@
         "prefer-const": "off",
         "jsx-a11y/anchor-is-valid": "off",
         "react/prop-types": "off",
-        "react/button-has-type": "off"
+        "react/button-has-type": "off",
+        "react/no-array-index-key":"off"
     }
 }

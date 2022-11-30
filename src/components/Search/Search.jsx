@@ -1,8 +1,7 @@
-import React from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import "./Search.scss";
 
-export const Search = ({ search, setSearch }) => {
+export function Search({ search, setSearch }) {
   const handleChange = (evt) => {
     setSearch(evt.target.value);
   };
@@ -22,4 +21,4 @@ export const Search = ({ search, setSearch }) => {
       </button>
     </div>
   );
-};
+}

@@ -1,14 +1,20 @@
-import { createContext, useState } from "react";
+import { createContext, useMemo, useState } from "react";
 import { getStorageValue } from "../services/storage";
 
 export const CartContext = createContext(null);
 
-export const CartContextProvider = ({ children }) => {
+export function CartContextProvider({ children }) {
   const [cartProducts, setCartProducts] = useState(
-    getStorageValue("cartProducts") || 0
+    getStorageValue("cartProducts") || 0,
   );
 
-  const value = { cartProducts, setCartProducts };
+  const value = useMemo(
+    () => ({
+      cartProducts,
+      setCartProducts,
+    }),
+    [cartProducts, setCartProducts],
+  );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
-};
+}
