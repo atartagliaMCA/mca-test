@@ -1,6 +1,12 @@
 ## Scripts disponibles
 
-En el directorio del proyecto, podemos correr:
+En el directorio del proyecto, debemos realizar un :
+
+### `npm install`
+
+para instalar las dependencias del proyecto.
+
+##luego desde el directorio del proyecto podemos utilizar los siguientes comandos:
 
 ### `npm start`
 
@@ -15,6 +21,14 @@ Este comando corre los test en modo interactivo pero no han sido implementados p
 
 Construye la aplicación para producción en la carpeta `build`.\
 
+### `npm run lint`
+
+ejecutará eslint
+
+### `npm run lint:fix`
+
+el linting intentará arreglar los cambios de manera automática y dejará aquellos que requieran de mayor atención por parte del developer.
+
 ## Comentarios
 
 Intenté utilizar un diseño minimalista para emplear el tiempo en resolver el challenge.
@@ -27,6 +41,6 @@ Otra opción sería sumar un dark theme.
 
 Una posible mejora podría ser también cambiar los service por un Hook que haga las peticiones a la API, pero me pareció fácil de entender al diferenciarlos en los service.
 
-con respecto al addToCart, pude hacer que se añada un producto. Al probarlo con postman la api me retornaba la acumulación de los productos en el cart, pero por estar la api en un dominio diferente al front de mi local, no funciona la cookie de sesion en el navegador y no se incrementa el valor del carrito, mas allá de uno.
+con respecto al addToCart, pude hacer que se añada un producto. Al probarlo con postman la api me retornaba la acumulación de los productos en el cart, y probe con fetch nativo y axios pero por estar la api en un dominio diferente al front de mi local, no funciona la cookie de sesion en el navegador y no se incrementa el valor del carrito, mas allá de uno. Se que no era la solución pero al menos quise intentarlo
 
 Quizás una solución podría ser la instalación de un proxy.
